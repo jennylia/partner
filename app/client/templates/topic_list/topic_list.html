@@ -1,5 +1,11 @@
 <template name="TopicList">
-  <div class="topic-list">
-    <h1>Find me in app/client/templates/topic_list/topic_list</h1>
-  </div>
+	<div class="topic-list">
+		<div class="containers">
+			<h2>Topics for Discussion</h2>
+		</div>
+
+		{{#each topics}}
+		{{>TopicItem}}
+		{{/each}}
+	</div>
 </template>

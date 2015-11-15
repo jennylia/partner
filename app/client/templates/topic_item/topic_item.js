@@ -1,26 +1,23 @@
 /*****************************************************************************/
-/* TopicList: Event Handlers */
+/* TopicItem: Event Handlers */
 /*****************************************************************************/
-Template.TopicList.events({
+Template.TopicItem.events({
 });
 
 /*****************************************************************************/
-/* TopicList: Helpers */
+/* TopicItem: Helpers */
 /*****************************************************************************/
-Template.TopicList.helpers({
-	topics: function(){
-		return Topics.find();
-	}
+Template.TopicItem.helpers({
 });
 
 /*****************************************************************************/
-/* TopicList: Lifecycle Hooks */
+/* TopicItem: Lifecycle Hooks */
 /*****************************************************************************/
-Template.TopicList.onCreated(function () {
+Template.TopicItem.onCreated(function () {
 });
 
-Template.TopicList.onRendered(function () {
+Template.TopicItem.onRendered(function () {
 });
 
-Template.TopicList.onDestroyed(function () {
+Template.TopicItem.onDestroyed(function () {
 });
