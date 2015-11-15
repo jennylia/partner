@@ -1,0 +1,16 @@
+<template name="CreateTopic">
+	<div class="create-topic">
+		<div class="container">
+			<h3>Create a topic</h3>
+			<form>
+				{{#if currentUser}}
+				<input type="text" id="topic" placeholder="Create a new Topic"/>
+				<input type="text" id="description" placeholder="Description"/>
+				<button id="button" class="btn btn-default" type="submit">Submit</button>
+				{{else}}
+				Sign in first please
+				{{/if}}
+			</form>
+		</div>
+	</div>
+</template>
