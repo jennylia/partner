@@ -1,7 +1,18 @@
 <template name="MasterLayout">
 	<div class="container-fluid">
-		{{>loginButtons}}
+		
+
 	</div>
+
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Your curent view</a></li>
+  <li role="presentation"><a href="/partners">Partners</a></li>
+  <li role="presentation"><a href="/topics">Topics</a></li>
+    <li role="presentation"><a href="#">{{>loginButtons}}</a></li>
+
+</ul>
+
 	{{> yield}}
 	<!-- {{> ProfileList}} -->
 	<!-- {{> TopicList}} -->
