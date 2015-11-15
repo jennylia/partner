@@ -1,4 +1,4 @@
-TopicsController = RouteController.extend({
+PartnersController = RouteController.extend({
   
   // A place to put your subscriptions
   // this.subscribe('items');
@@ -37,6 +37,10 @@ TopicsController = RouteController.extend({
     this.next();
   },
   
+  partners: function(){
+    this.render('ProfileList');
+  },
+  
   // The same thing as providing a function as the second parameter. You can
   // also provide a string action name here which will be looked up on a Controller
   // when the route runs. More on Controllers later. Note, the action function
@@ -48,11 +52,6 @@ TopicsController = RouteController.extend({
   action: function () {
     this.render();
   },
-
-  topics: function () {
-    this.render('TopicList');
-  },
-  
   onAfterAction: function () {
   },
   onStop: function () {
