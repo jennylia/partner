@@ -1,5 +1,32 @@
 <template name="CreateProfile">
-  <div class="create-profile">
-    <h2>Create a profile for yourself!</h2>
-  </div>
+	<div class="create-profile">
+		<!-- Todo: make sure that you only grab the profile for yourself -->
+		<h2>Create a profile for yourself!</h2>
+		<img src="{{profile.picture}}" class="img-rounded">
+
+		{{#if noProfile}}
+		<p>Looks like you have not created a profile yet...</p>
+		<h2>Let's create one</h2>
+
+		{{else}}
+
+		{{/if}}
+		<h3>{{profile.name}}</h3>
+		<h6>{{profile.bio}}</h6>
+
+
+
+		<form>
+			<input type="text" id="name" placeholder="Your display name please"/>
+			<input type="text" id="picture" placeholder="Picture url..."/>
+			<input type="text" id="website" placeholder="your website"/>
+			<input type="text" id="major" placeholder="major"/>
+			<input type="text" id="picture" placeholder="Picture url..."/>
+			<input type="text" id="picture" placeholder="Course looking for buddy for"/>
+
+			<button id="button" class="btn" type="submit">Save</button>
+
+		</form>
+
+	</div>
 </template>

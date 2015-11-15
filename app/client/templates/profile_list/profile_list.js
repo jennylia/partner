@@ -10,8 +10,12 @@ Template.ProfileList.events({
 Template.ProfileList.helpers({
 	profiles : function(){
 		return Profiles.find();
+	},
+
+	noProfile : function(){
+		return true;
 	}
-	});
+});
 
 /*****************************************************************************/
 /* ProfileList: Lifecycle Hooks */

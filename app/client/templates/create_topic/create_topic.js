@@ -16,8 +16,6 @@ Template.CreateTopic.events({
 			host: Meteor.userId,
 			hostname: Meteor.user().emails[0].address
 		})
-
-Topics.insert({ name: "CPSC 121 Assignment", description: "whatever is important I guess", host: Meteor.userId() })
 	}
 });
 
