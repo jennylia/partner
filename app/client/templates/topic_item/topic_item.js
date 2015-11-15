@@ -2,6 +2,10 @@
 /* TopicItem: Event Handlers */
 /*****************************************************************************/
 Template.TopicItem.events({
+	'click button': function(e,t){
+		var id = this._id;
+		Topics.remove(id);
+	}
 });
 
 /*****************************************************************************/
