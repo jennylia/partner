@@ -24,3 +24,11 @@ Router.route('partners', {
   where: 'client',
   action: 'partners'
 });
+
+Router.route('profile', {
+  name: 'profile',
+  controller: 'ProfileController',
+  where: 'client',
+  action: 'view'
+
+});

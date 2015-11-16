@@ -4,6 +4,8 @@
 		<h2>Create a profile for yourself!</h2>
 		<img src="{{profile.picture}}" class="img-rounded">
 
+		{{#if currentUser}}
+
 		{{#if noProfile}}
 		<p>Looks like you have not created a profile yet...</p>
 		<h2>Let's create one</h2>
@@ -13,8 +15,6 @@
 		{{/if}}
 		<h3>{{profile.name}}</h3>
 		<h6>{{profile.bio}}</h6>
-
-
 
 		<form>
 			<input type="text" id="name" placeholder={{placeholderText.name}}/>
@@ -27,6 +27,11 @@
 			<button id="button" class="btn" type="submit">Save</button>
 
 		</form>
+
+		{{else}}
+		Sign in first please
+		{{/if}}
+
 
 	</div>
 </template>
