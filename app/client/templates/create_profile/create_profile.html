@@ -1,37 +1,66 @@
 <template name="CreateProfile">
-	<div class="create-profile">
-		<!-- Todo: make sure that you only grab the profile for yourself -->
-		<h2>Create a profile for yourself!</h2>
-		<img src="{{profile.picture}}" class="img-rounded">
+    <div class="create-profile">
+        <!-- Todo: make sure that you only grab the profile for yourself -->
+        <h2>Create a profile for yourself!</h2>
+        <img src="{{profile.picture}}" class="img-rounded">
 
-		{{#if currentUser}}
+        {{#if currentUser}}
 
-		{{#if noProfile}}
-		<p>Looks like you have not created a profile yet...</p>
-		<h2>Let's create one</h2>
+            {{#if noProfile}}
+                <p>Looks like you have not created a profile yet...</p>
 
-		{{else}}
+                <h2>Let's create one</h2>
 
-		{{/if}}
-		<h3>{{profile.name}}</h3>
-		<h6>{{profile.bio}}</h6>
+            {{else}}
 
-		<form>
-			<input type="text" id="name" placeholder={{placeholderText.name}}/>
-			<input type="text" id="picture" placeholder="Picture url..."/>
-			<input type="text" id="website" placeholder="your website"/>
-			<input type="text" id="major" placeholder="major"/>
-			<input type="text" id="bio" placeholder="Tell us about yourself"/>
-			<input type="text" id="course" placeholder="Course looking for buddy for"/>
+            {{/if}}
+        <div class="container">
+            <h3>{{profile.name}}</h3>
+            <h6>{{profile.bio}}</h6>
+        </div>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder={{placeholderText.name}}/>
+                </div>
 
-			<button id="button" class="btn" type="submit">Save</button>
+                <div class="form-group">
+                    <label for="picture">Picture</label>
+                    <input type="text" id="picture" placeholder={{placeholderText.picture}}/>
+                </div>
 
-		</form>
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" placeholder={{placeholderText.website}}/>
+                </div>
 
-		{{else}}
-		Sign in first please
-		{{/if}}
+
+                <div class="form-group">
+                    <label for="major">Major</label>
+                    <input type="text" id="major" placeholder={{placeholderText.major}}/>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <input type="text" id="bio" placeholder={{placeholderText.bio}}/>
+                </div>
 
 
-	</div>
+                <div class="form-group">
+                    <label for="bio">Course</label>
+                    <input type="text" id="course" placeholder={{placeholderText.course}}/>
+                </div>
+
+
+                <button id="button" class="btn" type="submit">Save</button>
+
+            </form>
+        </div>
+        {{else}}
+            Sign in first please
+        {{/if}}
+
+
+    </div>
 </template>

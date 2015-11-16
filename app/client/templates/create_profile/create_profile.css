@@ -1,5 +1,26 @@
 /*****************************************************************************/
 /* CreateProfile: Style */
 /*****************************************************************************/
-.create-profile {
+.create-profile #name{
+       width: 100%;
 }
+.create-profile #picture{
+    width: 100%;
+}
+
+.create-profile #website{
+    width: 100%;
+}
+
+.create-profile #major{
+    width: 100%;
+}
+
+.create-profile #course{
+    width: 100%;
+}
+
+.create-profile #bio{
+    width: 100%;
+}
+
