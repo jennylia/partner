@@ -11,12 +11,13 @@ First thing first, sign up and create a profile. Once you created the profile, y
 1. Git clone 
 2. Get Iron Router (npm recommended
 3. cd partner/app && iron
+4. When you are ready to commit, please push to your own branches if you are not sure the branch works with master or not...
 
 ## Technology
 * Meteor.js
 * Bootstrap CSS
 
-## Models
+## Model / Collections
 * Users: Meteor.Users
 * Profiles: Each user has one profile
 * Topics: Independent of others
