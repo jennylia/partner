@@ -150,6 +150,16 @@ Template.CreateProfile.helpers({
     // var major = tmpl.find('#major').value;
     // var course = tmpl.find('#course').value;
     // var bio = tmpl.find('#bio').value;
+    ,
+
+    likes:function(){
+        var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
+        return profile.likes;
+    },
+
+    likesNameArray: function(){
+        return ["a"];
+    }
 });
 
 /*****************************************************************************/
