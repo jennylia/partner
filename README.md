@@ -7,6 +7,11 @@ This app is completely opensourced! Perfect place if you want to start learning 
 ## How the app works (User work flow)
 First thing first, sign up and create a profile. Once you created the profile, you can browse to see all other users' profiles. If you like someone, click "like". If the other person likes you back, you guys will be matched as study partners. You and your study partners can have your private chat rooms, or go to "Topics" page to have a discussion about topics with others.
 
+## For Developers
+1. Git clone 
+2. Get Iron Router (npm recommended
+3. cd partner/app && iron
+
 ## Technology
 * Meteor.js
 * Bootstrap CSS
