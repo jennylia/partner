@@ -17,7 +17,7 @@ First thing first, sign up and create a profile. Once you created the profile, y
 * Meteor.js
 * Bootstrap CSS
 
-## Model / Collections
+## Models / Collections
 * Users: Meteor.Users
 * Profiles: Each user has one profile
 * Topics: Independent of others
