@@ -20,7 +20,13 @@ Bootstrap CSS
 * Matches: Coming up
 
 ## About
-Created by Jenny Lian as an open source project for the Meteor community. You can be added as a collaborator as long as you don't commit destructive work. You can also submit pull request if you like. Msg me on FB, Twitter whatever to be added! Open collaboration! Will deploy regularly based on changes.
+Created by Jenny Lian as an open source project for the Meteor community. You can be added as a collaborator as long as you don't engage in destructive work. You can also submit pull request(s) if you like. Msg me on FB, Twitter whatever to be added as a collaborator! Open collaboration! Will deploy regularly based on changes.
+
+## Screenshot
+![Home page](./pictures/Home.png)
+![Page to view partners](./pictures/Parnters.png)
+![Your profile](./pictures/ProfilePage.png)
+![Topics for discussion](./pictures/Topics.png)
 
 ## License
 Open Source Project - The MIT License (MIT)
