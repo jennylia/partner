@@ -2,19 +2,20 @@
     <div class="create-profile">
         <!-- Todo: make sure that you only grab the profile for yourself -->
         <h2>Create a profile for yourself!</h2>
-        <img src="{{profile.picture}}" class="img-rounded">
 
         {{#if currentUser}}
 
-            {{#if noProfile}}
-                <p>Looks like you have not created a profile yet...</p>
+        {{#if noProfile}}
+        <p>Looks like you have not created a profile yet...</p>
 
-                <h2>Let's create one</h2>
+        <h2>Let's create one</h2>
 
-            {{else}}
+        {{else}}
 
-            {{/if}}
+        {{/if}}
         <div class="container">
+            <img src="{{profile.picture}}" class="img-rounded">
+
             <h3>{{profile.name}}</h3>
             <h6>{{profile.bio}}</h6>
         </div>
@@ -57,12 +58,15 @@
 
             </form>
 
-            <h3>Likes: {{likes}}</h3>
-            <h3>Likes Name Array: {{likesNameArray}}</h3>
-
+            <h3>People you liked so far: </h3>
+            <ul>
+                {{#each likesNameArray}}
+                <li>{{name}}</li>
+                {{/each}}
+            </ul>
         </div>
         {{else}}
-            Sign in first please
+        Sign in first please
         {{/if}}
 
 

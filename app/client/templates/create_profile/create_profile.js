@@ -158,7 +158,17 @@ Template.CreateProfile.helpers({
     },
 
     likesNameArray: function(){
-        return ["a"];
+        var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
+        var likes = profile.likes;
+        var names = [];
+        likes.forEach(addName);
+        function addName (element){
+            var newName = Profiles.find({_id: element}).fetch()[0];
+            names.push(newName);
+            // console.log(newName);   
+        }
+        console.log(names);
+        return names;
     }
 });
 
