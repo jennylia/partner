@@ -32,3 +32,9 @@ Router.route('profile', {
   action: 'view'
 
 });
+
+Router.route('matches', {
+  name: 'matches',
+  controller: 'MatchesController',
+  where: 'client'
+});
