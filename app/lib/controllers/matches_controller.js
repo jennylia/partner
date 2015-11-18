@@ -51,5 +51,8 @@ MatchesController = RouteController.extend({
   onAfterAction: function () {
   },
   onStop: function () {
+  },
+  matches: function(){
+    this.render('MatchList');
   }
 });

@@ -36,5 +36,6 @@ Router.route('profile', {
 Router.route('matches', {
   name: 'matches',
   controller: 'MatchesController',
-  where: 'client'
+  where: 'client',
+  action: 'matches'
 });
