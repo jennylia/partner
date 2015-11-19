@@ -23,7 +23,10 @@ First thing first, sign up and create a profile. Once you created the profile, y
 * Topics: Independent of others
 * Chat: Coming up
 * Likes: Coming up
-* Matches: Coming up
+* Matches: Match exist between 2 profiles, please look at the implementation in profile item js to see how they are matched.
+
+## Sample Data
+* Coming soon
 
 ## About
 Created by Jenny Lian as an open source project for the Meteor community. You can be added as a collaborator as long as you don't engage in destructive work. You can also submit pull request(s) if you like. Msg me on FB, Twitter whatever to be added as a collaborator! Open collaboration! Will deploy regularly based on changes.
