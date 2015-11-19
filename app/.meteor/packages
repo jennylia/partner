@@ -22,3 +22,4 @@ iron:router
 bootstrap
 accounts-ui
 accounts-password
+erasaur:meteor-lodash
