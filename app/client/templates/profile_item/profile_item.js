@@ -9,13 +9,10 @@ Template.ProfileItem.events({
 
 	'click [name="like"]': function(e, tmpl){
 
-		// need to find the profile that belongs to this user
-		var pid = Profiles.find({owner_id:Meteor.userId()}).fetch()[0]._id;
-		console.log(pid);
-		//To hack the problem with secure packages, we are going to store this in the profiles
-		var Obj = Profiles.find({owner_id:Meteor.userId()}).fetch();
-		// console.log(Obj);
-		var likes = Profiles.find({owner_id:Meteor.userId()}).fetch()[0].likes;
+		// need to find my profile;
+		var pid = Profiles.findOne({owner_id:Meteor.userId()})._id;
+		var likes = Profiles.findOne({owner_id:Meteor.userId()}).likes;
+
 		var updatedLikes;
 		if (likes){
 			updatedLikes = likes;
@@ -29,6 +26,15 @@ Template.ProfileItem.events({
 		console.log(updatedLikes);
 
 		Profiles.update({_id: pid}, {$set: {likes: updatedLikes}});
+
+
+
+		// Over here we will also calculate to see if we can create a match
+		findMatch();
+
+		function findMatch(){
+			console.log("meh");
+		}
 	}
 });
 
