@@ -1,7 +1,11 @@
 <template name="MatchItem">
-  <div class="match-item">
-    <h1>A great match</h1>
-    {{name}}
-    {{major}}
-  </div>
+	<div class="match-item">
+		<div class="container">
+			<img>
+			<img src="{{picture}}" class="img-rounded">
+
+			<h3>{{name}}</h3>
+			<h4>{{major}}</h4>
+		</div>
+	</div>
 </template>
