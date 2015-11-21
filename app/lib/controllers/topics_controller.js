@@ -53,6 +53,9 @@ TopicsController = RouteController.extend({
     this.render('TopicList');
   },
   
+  details: function(){
+    this.render('TopicsDetail', {data: Topics.findOne({_id: this.params._id})});
+  },
   onAfterAction: function () {
   },
   onStop: function () {

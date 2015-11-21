@@ -39,3 +39,10 @@ Router.route('matches', {
   where: 'client',
   action: 'matches'
 });
+
+Router.route('/topics/:_id', {
+  name: 'topics.detail',
+  controller: 'TopicsController',
+  where: 'client',
+  action: 'details'
+});
