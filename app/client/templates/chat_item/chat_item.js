@@ -1,28 +1,23 @@
 /*****************************************************************************/
-/* TopicsDetail: Event Handlers */
+/* ChatItem: Event Handlers */
 /*****************************************************************************/
-Template.TopicsDetail.events({
+Template.ChatItem.events({
 });
 
 /*****************************************************************************/
-/* TopicsDetail: Helpers */
+/* ChatItem: Helpers */
 /*****************************************************************************/
-Template.TopicsDetail.helpers({
-	comments: function() {
-		// console.log(this._id);
-		var chats = Chats.find({topic_id: this._id}).fetch();
-		return chats;
-	}
+Template.ChatItem.helpers({
 });
 
 /*****************************************************************************/
-/* TopicsDetail: Lifecycle Hooks */
+/* ChatItem: Lifecycle Hooks */
 /*****************************************************************************/
-Template.TopicsDetail.onCreated(function () {
+Template.ChatItem.onCreated(function () {
 });
 
-Template.TopicsDetail.onRendered(function () {
+Template.ChatItem.onRendered(function () {
 });
 
-Template.TopicsDetail.onDestroyed(function () {
+Template.ChatItem.onDestroyed(function () {
 });
