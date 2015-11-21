@@ -1,0 +1,15 @@
+<template name="CreateChat">
+	<div class="create-chat">
+		<div class="container">
+			<h3>Leave a Msg</h3>
+			<form id="createChat">
+				{{#if currentUser}}
+				<input type="text" id="chat" placeholder="Leave a message"/>
+				<button id="button" class="btn btn-default" type="submit">Submit</button>
+				{{else}}
+				Sign in first please
+				{{/if}}
+			</form>
+		</div>
+	</div>
+</template>

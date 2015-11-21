@@ -1,10 +1,13 @@
 <template name="TopicsDetail">
+	
 	<div class="topics-detail">
 		<h1>Details for this topic</h1>
 		<h3>Topic: {{name}} </h3>
 		<h3>Description: {{description}} </h3>
 		<hr/>
-
+		<div class="container">
+			{{> CreateChat}}
+		</div>
 		<h2>Comments for this topic</h2>
 		{{#each comments}}
 		{{> ChatItem}}

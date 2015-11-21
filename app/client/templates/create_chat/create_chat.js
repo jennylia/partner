@@ -1,26 +1,36 @@
 /*****************************************************************************/
-/* TopicList: Event Handlers */
+/* CreateChat: Event Handlers */
 /*****************************************************************************/
-Template.TopicList.events({
-});
+Template.CreateChat.events({
 
-/*****************************************************************************/
-/* TopicList: Helpers */
-/*****************************************************************************/
-Template.TopicList.helpers({
-	topics: function(){
-		return Topics.find().fetch().sort( { name: 1 } );
+	'submit form': function(e, tmpl){
+		e.preventDefault();
+
+		var body = tmpl.find('#chat').value;
+		Chats.insert({
+			topic_id: this._id,
+			author_id: Meteor.userId(),
+			body: body,
+			createdAt: new Date
+		});
 	}
+
 });
 
 /*****************************************************************************/
-/* TopicList: Lifecycle Hooks */
+/* CreateChat: Helpers */
 /*****************************************************************************/
-Template.TopicList.onCreated(function () {
+Template.CreateChat.helpers({
 });
 
-Template.TopicList.onRendered(function () {
+/*****************************************************************************/
+/* CreateChat: Lifecycle Hooks */
+/*****************************************************************************/
+Template.CreateChat.onCreated(function () {
 });
 
-Template.TopicList.onDestroyed(function () {
+Template.CreateChat.onRendered(function () {
+});
+
+Template.CreateChat.onDestroyed(function () {
 });

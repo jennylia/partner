@@ -10,8 +10,10 @@ Template.TopicsDetail.events({
 Template.TopicsDetail.helpers({
 	comments: function() {
 		// console.log(this._id);
-		var chats = Chats.find({topic_id: this._id}).fetch();
-		return chats;
+		// var chats = Chats.find({topic_id: this._id}).fetch().sort({createdAt: -1});
+		return Chats.find({topic_id: this._id}, 
+			{sort: {createdAt: -1}
+		});
 	}
 });
 

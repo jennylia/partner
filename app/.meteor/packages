@@ -23,3 +23,4 @@ bootstrap
 accounts-ui
 accounts-password
 erasaur:meteor-lodash
+momentjs:moment

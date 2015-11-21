@@ -8,6 +8,9 @@ Template.ChatItem.events({
 /* ChatItem: Helpers */
 /*****************************************************************************/
 Template.ChatItem.helpers({
+	time: function(){
+		return moment(this.CreatedAt).fromNow();
+	}
 });
 
 /*****************************************************************************/
