@@ -79,17 +79,17 @@ Template.CreateProfile.events({
 
 
             Profiles.update({_id: pid},
-                {
-                    $set: {
-                        name: name,
-                        picture: picture,
-                        website: website,
-                        major: major,
-                        course: course,
-                        bio: bio,
-                        owner_id: Meteor.userId()
-                    }
+            {
+                $set: {
+                    name: name,
+                    picture: picture,
+                    website: website,
+                    major: major,
+                    course: course,
+                    bio: bio,
+                    owner_id: Meteor.userId()
                 }
+            }
             );
         } else
         {
@@ -104,6 +104,42 @@ Template.CreateProfile.events({
             })
 
         }
+    },
+
+    'change .myFileInput': function(event, template) {
+        var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
+        var pid = profile._id;
+        console.log("pid is: " + pid);
+
+        FS.Utility.eachFile(event, 
+            function(file) {
+                Images.insert(file, function (err, fileObj) {
+                    if (err){
+             // handle error
+             console.log("error happened upload upload");
+             console.log(err);
+         } else {
+             // handle success depending what you need to do
+             var userId = Meteor.userId();
+             var imagesURL =  "/cfs/files/images/" + fileObj._id;
+             console.log(imagesURL);
+            //Don't know if this will work...
+            // Meteor.users.update(userId, {$set: imagesURL});
+
+
+            Profiles.update({_id: pid},
+            {
+                $set: {
+                    profilePic: imagesURL
+                }
+            }
+            );
+
+
+
+            }
+        });
+            });
     }
 });
 

@@ -1,0 +1,18 @@
+Here are some tutorial sites that features picture uploading that might be worth while in Meteor:
+This one seems like it will work well with the iron router
+https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa#.9n0xjyy6d
+It is based on:
+https://github.com/CollectionFS/Meteor-CollectionFS
+
+
+
+Another package:
+https://github.com/tomitrescak/meteor-uploads
+
+
+External API:
+https://meteor.hackpad.com/Meteor-Cookbook-Filepicker.io-Uploads-and-Image-Conversion-hIpSwJQV3HJ
+
+And a good tutorial:
+http://experimentsinmeteor.com/page2/
+

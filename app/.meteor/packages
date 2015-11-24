@@ -24,3 +24,5 @@ accounts-ui
 accounts-password
 erasaur:meteor-lodash
 momentjs:moment
+cfs:standard-packages
+cfs:gridfs

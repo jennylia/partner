@@ -13,6 +13,7 @@ Template.CreateChat.events({
 			body: body,
 			createdAt: new Date
 		});
+		tmpl.find('form').reset();
 	}
 
 });
