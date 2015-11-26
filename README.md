@@ -29,7 +29,7 @@ First thing first, sign up and create a profile. Once you created the profile, y
 * Coming soon
 
 ## Tips
-#for IBM bluemix
+###for IBM bluemix
 alias pushbluemix="cf push partners2015 -b https://github.com/cloudfoundry-community/cf-meteor-buildpack.git --no-start"
 alias startbluemix="cf start partners2015"
 
