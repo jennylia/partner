@@ -8,10 +8,13 @@ This app is completely opensourced! Perfect place if you want to start learning 
 First thing first, sign up and create a profile. Once you created the profile, you can browse to see all other users' profiles. If you like someone, click "like". If the other person likes you back, you guys will be matched as study partners. You and your study partners can have your private chat rooms, or go to "Topics" page to have a discussion about topics with others.
 
 ## For Developers
-1. Git clone 
-2. Get Iron Router (npm recommended
-3. cd partner/app && iron
-4. When you are ready to commit, please push to your own branches if you are not sure the branch works with master or not...
+```
+$ git clone git@github.com:jennylia/partner.git
+$ npm install -g iron-meteor 
+$ cd partner/app && iron
+```
+
+When you are ready to commit, please push to your own branches if you are not sure the branch works with master or not...
 
 ## Technology
 * Meteor.js
@@ -30,8 +33,10 @@ First thing first, sign up and create a profile. Once you created the profile, y
 
 ## Tips
 ###for IBM bluemix
+```
 alias pushbluemix="cf push partners2015 -b https://github.com/cloudfoundry-community/cf-meteor-buildpack.git --no-start"
 alias startbluemix="cf start partners2015"
+```
 
 ## About
 Created by Jenny Lian as an open source project for the Meteor community. You can be added as a collaborator as long as you don't engage in destructive work. You can also submit pull request(s) if you like. Msg me on FB, Twitter whatever to be added as a collaborator! Open collaboration! Will deploy regularly based on changes.
