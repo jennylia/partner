@@ -8,7 +8,7 @@ ENV home /home
 WORKDIR $home
 
 # Install app dependencies
-RUN npm install -g iron-meter
+RUN npm install -g iron-meteor
 
 # Creating app directory
 ADD . $home/
