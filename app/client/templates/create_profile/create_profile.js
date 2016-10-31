@@ -7,7 +7,6 @@ Template.CreateProfile.events({
         e.preventDefault();
 
         var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
-        console.log(profile);
 
         var nameT = tmpl.find('#name').value;
         var pictureT = tmpl.find('#picture').value;
@@ -62,21 +61,11 @@ Template.CreateProfile.events({
             }
         }
 
-        console.log(name);
-        console.log(picture);
-        console.log(website);
-        console.log(major);
-        console.log(course);
-        console.log(bio);
-
         //Profiles.update( {_id:"myMubWkP5NbbmhGWD"}, {$set: {name: "Jenny L"}})
 
         if (profile)
         {
             var pid = profile._id;
-            console.log(pid);
-            console.log("update is required!");
-
 
             Profiles.update({_id: pid},
             {
@@ -109,20 +98,16 @@ Template.CreateProfile.events({
     'change .myFileInput': function(event, template) {
         var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
         var pid = profile._id;
-        console.log("pid is: " + pid);
 
         FS.Utility.eachFile(event, 
             function(file) {
                 Images.insert(file, function (err, fileObj) {
                     if (err){
              // handle error
-             console.log("error happened upload upload");
-             console.log(err);
          } else {
              // handle success depending what you need to do
              var userId = Meteor.userId();
              var imagesURL =  "/cfs/files/images/" + fileObj._id;
-             console.log(imagesURL);
             //Don't know if this will work...
             // Meteor.users.update(userId, {$set: imagesURL});
 
@@ -151,7 +136,6 @@ Template.CreateProfile.helpers({
     profile: function ()
     {
         var profile = Profiles.find({owner_id: Meteor.userId()}).fetch()[0];
-        // console.log(profile);
         return profile;
     },
 
@@ -201,9 +185,7 @@ Template.CreateProfile.helpers({
         function addName (element){
             var newName = Profiles.find({_id: element}).fetch()[0];
             names.push(newName);
-            // console.log(newName);   
         }
-        console.log(names);
         return names;
     }
 });
