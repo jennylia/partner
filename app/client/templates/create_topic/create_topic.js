@@ -7,8 +7,6 @@ Template.CreateTopic.events({
 
 		var subject = tmpl.find('#topic').value;
 		var description = tmpl.find('#description').value;
-		console.log(subject);
-		console.log(description);
 
 		Topics.insert({
 			name: subject,
