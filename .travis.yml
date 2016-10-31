@@ -4,4 +4,4 @@ node_js:
   - "4"
 before_script:
   - npm install -g iron-meteor
-script: cd partner/app && iron
+script: cd app && iron
