@@ -4,4 +4,5 @@ node_js:
   - "4"
 before_script:
   - curl https://install.meteor.com/ | sh
+  - npm install -g meteor-iron
 script: cd app && iron
