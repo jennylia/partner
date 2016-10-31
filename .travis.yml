@@ -1,8 +1,7 @@
 language: node_js
 node_js:
-  - "6"
   - "4"
-before_script:
-  - curl https://install.meteor.com/ | sh
+before_install:
+  - "curl -L http://git.io/3l-rRA | /bin/sh"
   - npm install -g iron-meteor
 script: cd app && iron
