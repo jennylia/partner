@@ -26,3 +26,4 @@ erasaur:meteor-lodash
 momentjs:moment
 cfs:standard-packages
 cfs:gridfs
+mike:mocha
